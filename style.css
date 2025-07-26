@@ -215,46 +215,152 @@ nav a:hover {
 }
 
 /* Footer Styles */
+/* Rodapé Profissional */
+
 footer {
-    background-color: #222;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
+  background-color: #1a1a1a;
+  color: #ddd;
+  padding: 50px 20px 30px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-.footer-content {
-    max-width: 800px;
-    margin: 0 auto;
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-between;
 }
 
-.footer-content h3 {
-    margin-bottom: 20px;
-    font-size: 1.5rem;
+.footer-info {
+  flex: 1 1 350px;
 }
 
-.contact-info {
-    display: flex;
-    justify-content: center;
+.footer-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.footer-info p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #bbb;
+}
+
+.contact-details p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.contact-details i {
+  color: #25D366;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #bbb;
+  margin-right: 15px;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #25D366;
+}
+
+/* Formulário do rodapé */
+.footer-form {
+  flex: 1 1 350px;
+}
+
+.footer-form h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.footer-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-form input,
+.footer-form textarea {
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: none;
+  background-color: #333;
+  color: #eee;
+  font-size: 1rem;
+  resize: none;
+  font-family: inherit;
+  transition: background-color 0.3s ease;
+}
+
+.footer-form input:focus,
+.footer-form textarea:focus {
+  background-color: #444;
+  outline: none;
+}
+
+.footer-form button {
+  background-color: #25D366;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.footer-form button:hover {
+  background-color: #128C7E;
+}
+
+.form-feedback {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #25D366;
+  min-height: 20px;
+}
+
+/* Rodapé inferior */
+.footer-bottom {
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
     gap: 30px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+  }
+
+  .footer-info,
+  .footer-form {
+    flex: 1 1 100%;
+  }
 }
 
-.contact-item {
-    display: flex;
-    align-items: center;
-}
-
-.contact-item i {
-    margin-right: 10px;
-    font-size: 1.2rem;
-}
-
-.copyright {
-    margin-top: 30px;
-    font-size: 0.9rem;
-    color: #aaa;
-}
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
@@ -361,4 +467,118 @@ footer {
     .footer-content h3 {
         font-size: 1.2rem;
     }
+}
+
+.footer-form {
+    margin-top: 30px;
+    text-align: center;
+}
+.footer-form h4 {
+    color: #444;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.email-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.email-form input[type="email"] {
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 1em;
+    min-width: 220px;
+}
+.email-form button {
+    background: #25D366;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.email-form button:hover {
+    background: #128C7E;
+}
+
+.carousel-section {
+  background: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.carousel-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.carousel {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Botões */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.carousel-btn.prev {
+  left: 15px;
+}
+
+.carousel-btn.next {
+  right: 15px;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+@media (max-width: 768px) {
+  .carousel-slide img {
+    height: 300px;
+  }
 }
